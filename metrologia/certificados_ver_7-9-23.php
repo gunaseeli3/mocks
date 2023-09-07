@@ -48,17 +48,7 @@ $res=$db_cms->select_query_with_row($sql);
                     </div> -->
                 </form>
                 <br><br>
-                <div class='form-row' style='margin-bottom: 10px;'>
-                <div class="col-md-8">
-                        
-                <h3>Histórico de certificados</h3> </div>
-                <div class="col-md-4">
-                <a href='index.php?module=13&page=5&s=<?=$cid?>'>
-                        <button class='mb-2 mr-2 btn-icon btn-square btn btn-primary form-control' style="height: auto;">
-                        Añadir un nuevo certificado
-                        </button></a>
-</div> </div> 
-
+                <h3>Histórico de certificados</h3>
                 <div class="col-md-12">
                     <div id="accordion" class="accordion-wrapper mb-3">
                         <?php
@@ -96,7 +86,35 @@ $n=$i+1;
     </div>
             <div data-parent='#accordion' id='collapseOne_$ides' aria-labelledby='headingOne' class='collapse $expand'>
                 <div class='card-body'>
-                    
+                    <div class='form-row' style='margin-bottom: 10px;'>
+                <div class='col-md-3'>
+                    <div class='position-relative form-group'>
+                        <label for='exampleEmail11'>Fecha de emisión:</label>
+                        <span class='form-control' style='font-size: 14px;'> </span>
+                    </div>
+                </div>
+                <div class='col-md-3'>
+                    <div class='position-relative form-group'>
+                        <label for='exampleEmail11'>Fecha de vencimiento:</label>
+                        <span class='form-control' style='font-size: 14px;' > </span>
+                    </div>
+                </div>
+                <div class='col-md-3'>
+                    <div class='position-relative form-group'>
+                        <label for='exampleEmail11'>En sistema desde:</label>
+                        <span class='form-control' style='font-size: 14px;'> </span>
+                    </div>
+                </div>
+                <div class='col-md-3'>
+                    <div class='position-relative form-group'>
+                        <label for='exampleEmail11'>Cargar PDF:</label>
+                        <a href='index.php?module=13&page=11&s=$cid&k=0'>
+                        <button class='mb-2 mr-2 btn-icon btn-square btn btn-primary form-control'>
+                            <i class='fa-solid fa-cloud-arrow-up btn-icon-wrapper'></i>
+                            <i class='fa-regular fa-file-pdf btn-icon-wrapper'></i>
+                        </button></a>
+                    </div>
+                </div> </div>
                 
                             ";
 

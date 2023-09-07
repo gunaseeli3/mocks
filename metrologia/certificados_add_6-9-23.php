@@ -233,8 +233,7 @@ if (!empty($_SESSION["cms_status"]) && !empty($_SESSION["cms_msg"])) {
                     <div class="col-md-8">
                             <div class="position-relative form-group"><label for="exampleEmail11" class="">Nombre del Sensor</label>
                             <input type="hidden" id="selected_sensor_id" name="selected_sensor_id" value="<?php echo $sensor_existid?>">
-                            <input <?php if($sensor_existid){ ?> readonly <?php } ?> type="text" id="sensor_dropdown" name="id_sensor" list="sensor_list" placeholder="Search for a sensor" required class="form-control" value="<?php echo $mi_sensor?>">
-
+                            <input  type="text" id="sensor_dropdown" name="id_sensor" list="sensor_list" placeholder="Search for a sensor" required class="form-control" value="<?php echo $mi_sensor?>">
                             <datalist id="sensor_list"></datalist>
 
                         </div>

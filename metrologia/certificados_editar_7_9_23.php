@@ -473,7 +473,6 @@ require_once 'includes/sensorlists.php';
                 <div class="btn-actions-pane-right">
                 
                     <a href="index.php?module=13&page=4&s=-" class="mb-2 mr-2 btn-icon btn-shadow btn-outline-2x btn btn-outline-danger"><i class="fa-solid fa-x"></i> Cancelar</a>
-                    <a href="index.php?module=13&page=9&s=<?=$sensor_existid?>"><button class="mb-2 mr-2 btn-icon btn-shadow btn-outline-2x btn btn-outline-success"><i class="fa fa-pen"></i> Editar Sensor</button></a>
                     <a href="index.php?module=13&page=11&s=<?php echo $sensor_existid; ?>&k=0" class="mb-2 mr-2 btn-icon btn-shadow btn-outline-2x btn btn-outline-primary"><i class="fa-solid fa-cloud-arrow-up btn-icon-wrapper"></i> Carga masiva</a>
                    
 

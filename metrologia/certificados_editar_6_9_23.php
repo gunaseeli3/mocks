@@ -473,7 +473,6 @@ require_once 'includes/sensorlists.php';
                 <div class="btn-actions-pane-right">
                 
                     <a href="index.php?module=13&page=4&s=-" class="mb-2 mr-2 btn-icon btn-shadow btn-outline-2x btn btn-outline-danger"><i class="fa-solid fa-x"></i> Cancelar</a>
-                    <a href="index.php?module=13&page=9&s=<?=$sensor_existid?>"><button class="mb-2 mr-2 btn-icon btn-shadow btn-outline-2x btn btn-outline-success"><i class="fa fa-pen"></i> Editar Sensor</button></a>
                     <a href="index.php?module=13&page=11&s=<?php echo $sensor_existid; ?>&k=0" class="mb-2 mr-2 btn-icon btn-shadow btn-outline-2x btn btn-outline-primary"><i class="fa-solid fa-cloud-arrow-up btn-icon-wrapper"></i> Carga masiva</a>
                    
 
@@ -685,37 +684,6 @@ if (!empty($result_pdf_files)) {
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
  <script>
 $(document).ready(function () {
-
-    var sensorData = <?php echo json_encode($sensor_data); ?>;
-        var sensorList = $("#sensor_list");
-
-       
-
-
-         // Populate the dropdown with sensor data
-         sensorData.forEach(function (sensor) {
-            var option = $("<option>").attr("data-value", sensor.id_sensor).text(sensor.nombre);
-            sensorList.append(option);
-        });
-
-
-        $("#sensor_dropdown").on("input", function () {
-            var searchText = $(this).val().toLowerCase();
-            sensorList.find("option").each(function () {
-                var optionText = $(this).text().toLowerCase();
-                // Use 'nombre' for searching, but keep the value as 'id_sensor'
-                $(this).toggle(optionText.indexOf(searchText) > -1);
-            });
-        });
-
-        // Handle selection change to update the hidden field
-        $("#sensor_dropdown").change(function () {
-            var selectedValue = $(this).val();
-            var selectedIdSensor = sensorList.find("option:contains('" + selectedValue + "')").attr("data-value");
-            $("#selected_sensor_id").val(selectedIdSensor);
-        });
-    
-
      
 
     $('#form2').submit(function (e) {
